@@ -51,10 +51,14 @@ label{
   width:100px;
   word-wrap: normal;
 }
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+.App{
+  width: 30%;
+    background: bisque;
+    /* text-align: center; */
+    margin: 2% 0%;
+}
+#root{
+  display: flex;
+  justify-content: center;
+  background: #41464b;
 }

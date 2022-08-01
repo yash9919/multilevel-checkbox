@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import { checkboxArray } from './data';
 
@@ -12,21 +12,30 @@ function createCheckboxes() {
         if (children.length > 0) {
             tag = 'ul';
         }
-        let listItem = document.createElement(tag);
-        listItem.setAttribute('id', idName);
-        if (tag === 'ul') {
-            addExpandButton(listItem);
-        }
+        let listItem = createListItem(tag, idName);
         listItem.style.display = 'none';
         let inputBox = createInputBox(element);
         let parentName = element.parentId === null ? 'checkbox0' : PREFIX + element.parentId;
         document.getElementById(parentName).append(listItem);
-        document.getElementById(idName).append(inputBox);
-        let label = document.createElement('label');
-        label.setAttribute('for', element.name);
-        label.innerHTML = element.label;
-        document.getElementById(idName).append(label);
+        let label = createLabel(element);
+        document.getElementById(idName).append(inputBox, label);
     });
+}
+
+function createListItem(tag, idName) {
+    let listItem = document.createElement(tag);
+    listItem.setAttribute('id', idName);
+    if (tag === 'ul') {
+        addExpandButton(listItem);
+    }
+    return listItem;
+}
+
+function createLabel(element) {
+    let label = document.createElement('label');
+    label.setAttribute('for', element.name);
+    label.innerHTML = element.label;
+    return label;
 }
 
 function createInputBox(element) {
