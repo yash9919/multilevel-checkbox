@@ -18,9 +18,9 @@ Example:
     label: "EPL"
   }
 ```
-1. name : Unique name of checkbox based on the parent and item number
-2. parenId : Parent string of the current checbox
-3. label : Label for the checkbox 
+1. __name__ : Unique name of checkbox based on the parent and item number
+2. __parenId__ : Parent string of the current checbox
+3. __label__ : Label for the checkbox 
 
 ### `Nested checkbox`
 
