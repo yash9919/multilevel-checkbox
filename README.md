@@ -18,9 +18,9 @@ Example:
     label: "EPL"
   }
 ```
-name : Unique name of checkbox based on the parent and item number
-parenId : Parent string of the current checbox
-label : Label for the checkbox 
+1. name : Unique name of checkbox based on the parent and item number
+2. parenId : Parent string of the current checbox
+3. label : Label for the checkbox 
 
 ### `Nested checkbox`
 
@@ -28,6 +28,6 @@ Each checbox can have N levels of nesting depending on the data provided
 
 ### `Indeterminate state`
 
-Checboxes have an indeterminate state if any child checkbox is selected.
-Checkbox turns checked when all it's child checkbox are selected.
+1. Checboxes have an indeterminate state if any child checkbox is selected.
+2. Checkbox turns checked when all it's child checkbox are selected.
 
