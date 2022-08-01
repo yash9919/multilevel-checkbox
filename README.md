@@ -27,3 +27,7 @@ label : Label for the checkbox
 Each checbox can have N levels of nesting depending on the data provided
 
 ### `Indeterminate state`
+
+Checboxes have an indeterminate state if any child checkbox is selected.
+Checkbox turns checked when all it's child checkbox are selected.
+
